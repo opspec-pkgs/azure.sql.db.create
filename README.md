@@ -25,8 +25,8 @@ run:
     pkg: { ref: github.com/opspec-pkgs/azure.sql.db.create#VERSION }
     inputs: 
       subscriptionId:
-      azureUsername:
-      azurePassword:
+      loginId:
+      loginSecret:
       name:
       server:
       resourceGroup:
@@ -36,6 +36,10 @@ run:
       serviceObjective:
       collation:
       maxSize:
+      sampleSchemaName:
+      loginTenantId:
+      loginType:
+      tags:
       # end optional args
 ```
 

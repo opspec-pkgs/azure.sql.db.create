@@ -5,15 +5,14 @@ inputs:
     string:
       constraints: { minLength: 1 }
       description: id of azure subscription
-  azureUsername:
-    string:
-      constraints: { format: email }
-      description: email address of azure account
-  azurePassword:
+  loginId:
     string:
       constraints: { minLength: 1 }
-      description: password of azure account
-      isSecret: true
+      description: id of user, service principal, or app to login with
+  loginSecret:
+    string:
+      constraints: { minLength: 1 }
+      description: secret of user, service principal, or app to login with
   name:
     string:
       constraints: { minLength: 1 }
@@ -50,6 +49,25 @@ inputs:
       constraints: { minLength: 1 }
       description: max storage size of the provisioned db
       default: 250GB
+  sampleSchemaName:
+    string:
+      constraints: { minLength: 1 }
+      description: sample schema name of the provisioned db
+      default: " "
+  loginTenantId:
+    string:
+      constraints: { minLength: 1 }
+      description: tenant id of user, service principal, or app to login with
+      default: " "
+  loginType:
+    string:
+      constraints: { enum: [user, sp]}
+      description: type of login; 'user' (default) or 'sp' for service principal
+      default: user
+  tags:
+    string:
+      description: (space separated) tags (in key[=value] format) for provisioned storage account
+      default: " "
 run:
   container:
     image: { ref: 'azuresdk/azure-cli-python:0.2.10' }
@@ -57,8 +75,8 @@ run:
     files: { /cmd.sh }
     envVars:
       subscriptionId:
-      azureUsername:
-      azurePassword:
+      loginId:
+      loginSecret:
       name:
       server:
       resourceGroup:
@@ -67,3 +85,7 @@ run:
       serviceObjective:
       collation:
       maxSize:
+      sampleSchemaName:
+      loginTenantId:
+      loginType:
+      tags:
