@@ -1,7 +1,7 @@
-# problem statement
+# Problem statement
 creates an azure sql db (if doesn't already exist)
 
-# example usage
+# Example usage
 
 > note: in examples, VERSION represents a version of the azure.sql.db.create pkg
 
@@ -43,3 +43,7 @@ run:
       # end optional args
 ```
 
+# Support
+
+join us on [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+or [open an issue](https://github.com/opspec-pkgs/azure.sql.db.create/issues)
