@@ -1,9 +1,13 @@
+[![Build Status](https://travis-ci.org/opspec-pkgs/azure.sql.db.create.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.sql.db.create)
+
 # Problem statement
+
 creates an azure sql db (if doesn't already exist)
 
 # Example usage
 
-> note: in examples, VERSION represents a version of the azure.sql.db.create pkg
+> note: in examples, VERSION represents a version of the
+> azure.sql.db.create pkg
 
 ## install
 
@@ -44,8 +48,10 @@ op:
 
 # Support
 
-join us on [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
-or [open an issue](https://github.com/opspec-pkgs/azure.sql.db.create/issues)
+join us on
+[![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+or
+[open an issue](https://github.com/opspec-pkgs/azure.sql.db.create/issues)
 
 # Releases
 
@@ -56,4 +62,5 @@ and [tagged](https://git-scm.com/book/en/v2/Git-Basics-Tagging); see
 
 # Contributing
 
-see [project/CONTRIBUTING.md](https://github.com/opspec-pkgs/project/blob/master/CONTRIBUTING.md)
+see
+[project/CONTRIBUTING.md](https://github.com/opspec-pkgs/project/blob/master/CONTRIBUTING.md)
