@@ -1,39 +1,42 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/azure.sql.db.create.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.sql.db.create)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 creates an azure sql db (if doesn't already exist)
 
+# Format
+
+this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
+
 # Example usage
 
-> note: in examples, VERSION represents a version of the
-> azure.sql.db.create pkg
-
-## install
+## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/azure.sql.db.create#VERSION
+opctl pkg install github.com/opspec-pkgs/azure.sql.db.create#2.0.0
 ```
 
-## run
+## Run
 
 ```
-opctl run github.com/opspec-pkgs/azure.sql.db.create#VERSION
+opctl run github.com/opspec-pkgs/azure.sql.db.create#2.0.0
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/azure.sql.db.create#VERSION }
-  inputs: 
+  pkg: { ref: github.com/opspec-pkgs/azure.sql.db.create#2.0.0 }
+  inputs:
     subscriptionId:
     loginId:
     loginSecret:
     name:
     server:
     resourceGroup:
-    # begin optional args
+    # params w/ default
     elasticPool:
     edition:
     serviceObjective:
@@ -43,7 +46,6 @@ op:
     loginTenantId:
     loginType:
     tags:
-    # end optional args
 ```
 
 # Support
